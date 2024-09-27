@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
 :root {
-    --bg-color: #1a1a1a; /* Fundo preto suave */
-    --primary-color: #2e2e2e; /* Cinza escuro para elementos principais */
-    --secondary-color: #e6e6e6; /* Cinza claro para o texto */
-    --accent-color: #ff9800; /* Laranja brilhante para destaques */
-    --highlight-color: #2196f3; /* Azul vibrante para ênfases secundárias */
+    --bg-color: #181818; /* Fundo preto suave */
+    --primary-color: #2b2b2b; /* Cinza escuro profundo */
+    --secondary-color: #f0f0f0; /* Branco suave para o texto */
+    --accent-color: #f39c12; /* Amarelo dourado para destaques */
+    --highlight-color: #3498db; /* Azul brilhante para ênfases secundárias */
     --font: "Nunito", sans-serif; /* Tipografia moderna */
 }
 
@@ -15,24 +15,25 @@ body {
     font-family: var(--font);
     height: 100vh;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
     background-color: var(--primary-color);
     text-align: center;
-    padding: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 2rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1;
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: var(--accent-color);
     font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin: 0;
-    letter-spacing: 1.5px;
 }
 
 nav {
@@ -53,28 +54,12 @@ nav a {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-nav a::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: var(--accent-color);
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav a:hover::before {
-    width: 100%;
-    left: 0;
-}
-
 nav a:hover {
-    color: var(--accent-color);
+    color: var(--highlight-color);
 }
 
 .grafico {
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding: 2rem;
 }
 
@@ -87,9 +72,9 @@ nav a:hover {
     text-align: center;
     padding: 2rem;
     border: 2px solid var(--highlight-color);
-    background-color: rgba(255, 255, 255, 0.07); /* Fundo transparente */
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo levemente transparente */
     color: var(--secondary-color);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 span {
@@ -109,4 +94,5 @@ footer {
     font-size: 1rem;
     text-transform: uppercase;
     position: relative;
+    z-index: 1;
 }
